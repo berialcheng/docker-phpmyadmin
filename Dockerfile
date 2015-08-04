@@ -2,8 +2,6 @@ FROM ubuntu:14.04
 
 MAINTAINER Cheng "berialcheng@gmail.com"
 
-ENV http_proxy http://web-proxy.rose.hp.com:8080
-ENV https_proxy http://web-proxy.rose.hp.com:8080
 RUN apt-get update && apt-get -y install apache2 && apt-get -y install php5 && apt-get -y install php5-mysql && apt-get -y install unzip && apt-get -y install vim && apt-get clean
 
 COPY phpMyAdmin-4.4.12-all-languages.zip /tmp/phpMyAdmin-4.4.12-all-languages.zip
