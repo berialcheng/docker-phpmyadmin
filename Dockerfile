@@ -10,6 +10,7 @@ RUN unzip /tmp/phpMyAdmin-4.4.12-all-languages.zip -d /tmp/ && mv /tmp/phpMyAdmi
 COPY config.inc.php /var/www/html/phpMyAdmin/
 
 EXPOSE 80
+EXPOSE 443
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
