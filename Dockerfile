@@ -14,7 +14,7 @@ ENV MYSQL_USER root
 ENV MYSQL_PASSWORD root
 ENV MYSQL_ALLOW_NO_PASSWORD true
 
-COPY docker-entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 80
