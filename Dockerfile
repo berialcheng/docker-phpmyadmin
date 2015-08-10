@@ -9,6 +9,14 @@ RUN unzip /tmp/phpMyAdmin-4.4.12-all-languages.zip -d /tmp/ && mv /tmp/phpMyAdmi
 
 COPY config.inc.php /var/www/html/phpMyAdmin/
 
+ENV MYSQL_HOST localhost
+ENV MYSQL_USER root
+ENV MYSQL_PASSWORD root
+ENV MYSQL_ALLOW_NO_PASSWORD true
+
+COPY docker-entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 EXPOSE 80
 EXPOSE 443
 

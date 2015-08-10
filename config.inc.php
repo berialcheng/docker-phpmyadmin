@@ -28,12 +28,12 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'config';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = '192.168.59.103';
+$cfg['Servers'][$i]['host'] = '{{MYSQL_HOST}}';
+$cfg['Servers'][$i]['user'] = '{{MYSQL_USER}}';
+$cfg['Servers'][$i]['password'] = '{{MYSQL_PASSWORD}}';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
+$cfg['Servers'][$i]['AllowNoPassword'] = {{MYSQL_ALLOW_NO_PASSWORD}};
 $cfg['Servers'][$i]['compress'] = false;
-$cfg['Servers'][$i]['AllowNoPassword'] = false;
-$cfg['Servers'][$i]['user'] = 'root';
-$cfg['Servers'][$i]['password'] = 'root';
 
 /*
  * phpMyAdmin configuration storage settings.
