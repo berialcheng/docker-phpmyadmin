@@ -22,8 +22,3 @@ EXPOSE 80
 EXPOSE 443
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
-#docker build -t adrian/apache .
-#docker run -itd -P --name apache adrian/apache
-#docker exec -it apache bash
-#docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:5.6
