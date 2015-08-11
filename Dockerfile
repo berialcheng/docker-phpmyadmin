@@ -15,6 +15,7 @@ ENV MYSQL_PASSWORD root
 ENV MYSQL_ALLOW_NO_PASSWORD true
 
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 80
