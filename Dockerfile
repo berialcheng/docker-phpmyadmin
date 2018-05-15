@@ -4,10 +4,11 @@ MAINTAINER Cheng "berialcheng@gmail.com"
 
 RUN apt-get update && apt-get -y install apache2 && apt-get -y install php5 && apt-get -y install php5-mysql && apt-get -y install unzip && apt-get -y install vim && apt-get clean
 
-COPY phpMyAdmin-4.4.12-all-languages.zip /tmp/phpMyAdmin-4.4.12-all-languages.zip
-RUN unzip /tmp/phpMyAdmin-4.4.12-all-languages.zip -d /tmp/ && mv /tmp/phpMyAdmin-4.4.12-all-languages /var/www/html/phpMyAdmin && rm -rf /tmp/phpMyAdmin*
+COPY phpMyAdmin-4.8.0.1-all-languages.zip /tmp/phpMyAdmin-4.8.0.1-all-languages.zip
+RUN unzip /tmp/phpMyAdmin-4.8.0.1-all-languages.zip -d /tmp/ && mv /tmp/phpMyAdmin-4.8.0.1-all-languages /var/www/html/phpMyAdmin && rm -rf /tmp/phpMyAdmin*
 
 COPY config.inc.php /var/www/html/phpMyAdmin/
+COPY php.ini /etc/php5/apache2/
 
 ENV MYSQL_HOST localhost
 ENV MYSQL_USER root
